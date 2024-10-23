@@ -2,6 +2,7 @@ package tn.esprit.spring.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -30,5 +31,5 @@ public class Instructor implements Serializable {
 	String lastName;
 	LocalDate dateOfHire;
 	@OneToMany
-	Set<Course> courses;
+	Set<Course> courses= new HashSet<>();
 }
